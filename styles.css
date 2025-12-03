@@ -103,7 +103,22 @@ img{max-width:100%;display:block}
 
 /* CEO section */
 .ceo-grid{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:center;padding:18px;margin-top:12px;background:linear-gradient(90deg,rgba(225,29,72,0.03),rgba(14,165,233,0.02));border-radius:12px;box-shadow:var(--card-shadow)}
-.ceo-photo img{width:100%;height:420px;object-fit:cover;border-radius:12px;object-position:center 25%}
+.ceo-photo img{
+	width:100%;
+	/* keep a reasonable height but show the upper area (smaller Y% = show top) */
+	height:420px;
+	object-fit:cover;
+	border-radius:12px;
+	object-position:center 12%; /* moved up so face is visible */
+	transition:object-position .28s ease, height .28s ease;
+}
+/* mobile: show more of the top and reduce height */
+@media (max-width:480px){
+	.ceo-photo img{
+		height:300px;
+		object-position:center 6%;
+	}
+}
 .ceo-quote{margin:12px 0;font-style:italic;font-weight:600;color:var(--accent)}
 .ceo-text{color:var(--muted)}
 .ceo-contact{margin-top:10px;display:flex;flex-direction:column;gap:6px}
