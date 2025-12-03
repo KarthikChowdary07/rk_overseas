@@ -29,6 +29,7 @@
         </a>
 
         <nav class="nav">
+          <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#students">Students</a>
           <a href="#ceo">Founder</a>
@@ -156,6 +157,36 @@
         </div>
       </section>
 
+      <!-- COUNTRIES WE PROVIDE -->
+      <section id="countries" class="section">
+        <div class="wrap">
+          <h2 class="section-title">Countries We Provide</h2>
+          <p class="muted">Study opportunities across top destinations worldwide.</p>
+          <div class="cards" style="margin-top:32px;grid-template-columns:repeat(4,1fr)">
+            <article class="service" style="min-height:300px">
+              <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=400&q=80" alt="United Kingdom" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+              <div class="service-head" style="justify-content:center;margin-bottom:10px;font-size:22px">🇬🇧 United Kingdom</div>
+              <p>Prestigious universities with one-year Master's programs and global recognition.</p>
+            </article>
+            <article class="service" style="min-height:300px">
+              <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=400&q=80" alt="United States" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+              <div class="service-head" style="justify-content:center;margin-bottom:10px;font-size:22px">🇺🇸 United States</div>
+              <p>World-class universities with diverse programs and excellent financial aid opportunities.</p>
+            </article>
+            <article class="service" style="min-height:300px">
+              <img src="https://images.unsplash.com/photo-1503066211613-c17ebc9daef0?auto=format&fit=crop&w=400&q=80" alt="Canada" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+              <div class="service-head" style="justify-content:center;margin-bottom:10px;font-size:22px">🇨🇦 Canada</div>
+              <p>Affordable tuition, work-study options, and pathway to permanent residency.</p>
+            </article>
+            <article class="service" style="min-height:300px">
+              <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=400&q=80" alt="Australia" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+              <div class="service-head" style="justify-content:center;margin-bottom:10px;font-size:22px">🇦🇺 Australia</div>
+              <p>High-quality education with post-study work visa opportunities and vibrant campuses.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- CEO / Founder -->
       <section id="ceo" class="section subtle-2">
         <div class="wrap ceo-grid">
@@ -175,52 +206,52 @@
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="section">
-        <div class="wrap">
-          <h2 class="section-title">Contact & Apply</h2>
-          <p class="muted">Send your details and we will reach out for a free consultation.</p>
+       <!-- CONTACT -->
+       <section id="contact" class="section">
+         <div class="wrap">
+           <h2 class="section-title">Contact & Apply</h2>
+           <p class="muted">Send your details and we will reach out for a free consultation.</p>
 
-          <form id="contactForm" class="form-grid" onsubmit="return submitContact(event)">
-            <input name="name" id="name" type="text" placeholder="Full name" required>
-            <input name="phone" id="phone" type="tel" placeholder="Phone number (optional)">
-            <select name="service" id="service">
+           <form id="contactForm" class="form-stack" onsubmit="return submitContact(event)" style="max-width:500px;margin:0 auto">
+            <input name="name" id="name" type="text" placeholder="Full name" required style="width:100%;padding:14px;margin-bottom:16px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-size:16px">
+            <input name="phone" id="phone" type="tel" placeholder="Phone number (optional)" style="width:100%;padding:14px;margin-bottom:16px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-size:16px">
+            <select name="service" id="service" style="width:100%;padding:14px;margin-bottom:16px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-size:16px">
               <option value="">I want help with…</option>
               <option>University Shortlist</option>
               <option>Application + SOP</option>
               <option>Visa Assistance</option>
               <option>Scholarship Guidance</option>
             </select>
-            <textarea name="message" id="message" rows="4" placeholder="Short message"></textarea>
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Send Message</button>
-              <button type="button" class="btn btn-ghost" onclick="scrollToTop()">Back to top</button>
+            <textarea name="message" id="message" rows="5" placeholder="Short message" style="width:100%;padding:14px;margin-bottom:16px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-size:16px;resize:vertical"></textarea>
+            <div style="display:flex;gap:12px;flex-direction:column">
+              <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+              <button type="button" class="btn btn-ghost" onclick="scrollToTop()" style="width:100%">Back to top</button>
             </div>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
+            <p id="formStatus" class="form-status" aria-live="polite" style="margin-top:12px;text-align:center"></p>
           </form>
-        </div>
-      </section>
+         </div>
+       </section>
 
-    </main>
+     </main>
 
-    <footer class="site-footer">
-      <div class="wrap footer-inner">
-        <div class="left">
-          <img src="https://res.cloudinary.com/dzce88vum/image/upload/v1764760601/IMG-20251201-WA0007_ypnpyd.jpg" alt="RK Overseas" class="foot-logo">
-          <div class="copy">© <span id="year"></span> RK Overseas </div>
-          <div class="dev" style="margin-top:6px;font-size:13px;color:#556070">Designed &amp; developed by Karthik Chowdary</div>
-        </div>
-        <div class="right muted" style="display:flex;gap:12px;align-items:center">
-          <a href="https://www.instagram.com/rk__consultancy?igsh=d3dsNDFyMjJ0d3hn" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
-            <!-- Instagram icon -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="1.2"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          </a>
-          <div style="display:flex;flex-direction:column;align-items:flex-end">
-            <div class="muted"></div>
-          </div>
-        </div>
-      </div>
-    </footer>
+     <footer class="site-footer">
+       <div class="wrap footer-inner">
+         <div class="left">
+          <img src="https://res.cloudinary.com/dzce88vum/image/upload/v1764760601/IMG-20251201-WA0007_ypnpyd.jpg" alt="RK Overseas" class="foot-logo" style="width:80px;height:80px;border-radius:12px;margin-bottom:12px">
+           <div class="copy">© <span id="year"></span> RK Overseas </div>
+           <div class="dev" style="margin-top:12px;font-size:16px;color:#556070;font-weight:600;text-align:center;width:100%">Designed &amp; developed by Karthik Chowdary</div>
+         </div>
+         <div class="right muted" style="display:flex;gap:12px;align-items:center">
+           <a href="https://www.instagram.com/rk__consultancy?igsh=d3dsNDFyMjJ0d3hn" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+             <!-- Instagram icon -->
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="1.2"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+           </a>
+           <div style="display:flex;flex-direction:column;align-items:flex-end">
+             <div class="muted"></div>
+           </div>
+         </div>
+       </div>
+     </footer>
   </div>
 
   <script src="script.js"></script>
