@@ -32,8 +32,8 @@ img{max-width:100%;display:block}
 
 /* topbar */
 .topbar{position:fixed;top:0;left:0;width:100%;z-index:60;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));backdrop-filter:blur(6px);border-bottom:1px solid rgba(15,23,42,0.03)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px;flex-wrap:nowrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;flex-shrink:0}
 .brand-logo{width:56px;height:56px;border-radius:12px;object-fit:cover;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
 .brand-text{line-height:1}
 .brand-name{font-weight:800;font-size:18px}
@@ -137,6 +137,8 @@ img{max-width:100%;display:block}
   .hero-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:repeat(2,1fr)}
   .stories-carousel{overflow-x:auto;padding-bottom:8px}
+  /* Countries single column on tablet and up */
+  #countries .cards{grid-template-columns:1fr!important;max-width:800px!important;margin-left:auto!important;margin-right:auto!important}
 }
 
 @media (max-width:720px){
@@ -153,34 +155,10 @@ img{max-width:100%;display:block}
     width:auto;
     max-width:200px;
   }
-  /* Countries section mobile */
-  #countries .cards{grid-template-columns:repeat(2,1fr)}
-   .section{text-align:center}
-   .hero-left h1{font-size:42px;line-height:1.25}
-   .lead{font-size:20px;line-height:1.8}
-   .kpis{flex-wrap:wrap;gap:8px}
-   .kpis li{min-width:130px;padding:14px;font-size:16px;margin-left:auto;margin-right:auto}
-   .section-title{font-size:36px;line-height:1.35;font-weight:900}
-   .muted{font-size:17px;line-height:1.7;max-width:90%}
-   .service-head{font-size:23px;font-weight:900;line-height:1.25;justify-content:center}
-   .service{padding:24px;font-size:14px;min-height:280px;align-items:center;text-align:center}
-   .service-logo{width:56px;height:56px}
-   .service-logo svg{width:28px;height:28px}
-   .service p{font-size:16px;line-height:1.7}
-   .form-stack input, .form-stack textarea, .form-stack select{padding:13px;font-size:15px;margin-bottom:14px}
-   .form-stack button{padding:13px 20px;font-size:15px}
-   .form-grid input,.form-grid textarea,.form-grid select{padding:12px;font-size:15px}
-   .form-actions{flex-direction:column;align-items:stretch}
-   .form-actions .btn{width:100%;padding:12px;font-size:16px}
-   .ceo-photo img{height:280px;object-position:center 20%}
-   .ceo-quote{font-size:15px;line-height:1.6}
-   .ceo-text{font-size:15px;line-height:1.6}
-   .ceo-contact p{font-size:13px}
-   .footer-inner{flex-direction:column;align-items:center;gap:16px;text-align:center}
-   .left{width:100%;order:1}
-   .right{width:100%;order:2;justify-content:center}
-   .copy{margin-top:4px;font-size:12px}
-   .dev{font-size:13px;margin-top:10px!important}
+  /* Countries section tablet */
+  #countries .cards{grid-template-columns:1fr!important;max-width:100%!important}
+  #countries .service{min-height:260px;padding:20px}
+  #countries .service-head{font-size:22px}
  }
 
  @media (max-width:480px){
@@ -238,14 +216,25 @@ img{max-width:100%;display:block}
 
  /* new small tweaks for added sections */
  #why .service, #destinations .service { background:linear-gradient(180deg,#fff,#fbfeff); padding:32px; border-radius:14px; box-shadow:var(--card-shadow); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; min-height:320px; }
- #destinations .service img{height:200px;object-fit:cover;border-radius:10px}
+ 
+ /* Countries section flag styling */
+ #countries .service{background:linear-gradient(180deg,#fff,#fbfeff);padding:28px;border-radius:14px;box-shadow:var(--card-shadow);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:300px}
+ #countries .service-head:first-of-type{font-size:72px;line-height:1;margin-bottom:16px;display:block;width:100%;text-align:center}
+ #countries .service-head:nth-of-type(2){font-size:28px;margin-bottom:12px}
+ #countries .service p{font-size:16px;line-height:1.7;color:var(--muted);margin:0}
 
  @media (max-width:720px){
    #why .service, #destinations .service { padding:22px; min-height:280px; }
-   #why .service img, #destinations .service img{height:150px}
+   #countries .service{min-height:260px;padding:20px}
+   #countries .service-head:first-of-type{font-size:56px;margin-bottom:12px}
+   #countries .service-head:nth-of-type(2){font-size:24px}
+   #countries .service p{font-size:15px}
  }
 
  @media (max-width:480px){
    #why .service, #destinations .service { padding:18px; min-height:240px; }
-   #why .service img, #destinations .service img{height:120px}
+   #countries .service{min-height:240px;padding:14px}
+   #countries .service-head:first-of-type{font-size:48px;margin-bottom:10px}
+   #countries .service-head:nth-of-type(2){font-size:20px}
+   #countries .service p{font-size:14px}
  }
